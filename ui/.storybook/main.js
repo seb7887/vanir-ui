@@ -3,8 +3,7 @@ module.exports = {
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
-    '@storybook/addon-knobs/register',
-    '@storybook/addon-backgrounds/register',
+    '@storybook/addon-backgrounds',
     '@storybook/addon-viewport/register',
     'storybook-addon-performance/register',
   ],
