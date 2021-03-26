@@ -1,5 +1,5 @@
 {
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -23,7 +23,8 @@
     "tw-config": "npx tailwind-config-viewer"
   },
   "peerDependencies": {
-    "react": ">=16"
+    "react": ">=16",
+    "tailwindcss": ">=2"
   },
   "husky": {
     "hooks": {

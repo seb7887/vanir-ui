@@ -1,0 +1,33 @@
+name: Release
+on:
+  release:
+    types: [published]
+jobs:
+  publish:
+    name: Publish to NPM registry
+    runs-on: ubuntu-latest
+    env:
+      NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Use Node ${{ matrix.node }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      - name: Install deps and build (with cache)
+        uses: bahmutov/npm-install@v1
+        with:
+          working-directory: ui
+
+      - name: Lint
+        run: yarn --cwd ./ui lint
+
+      - name: Build
+        run: yarn --cwd ./ui build
+
+      - name: Publish
+        run: cd ui && npm publish --access public
