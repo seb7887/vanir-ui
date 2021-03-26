@@ -35,6 +35,9 @@ const meta: Meta = {
         type: 'boolean',
       },
     },
+    onClick: {
+      action: 'clicked',
+    },
   },
   parameters: {
     controls: { expanded: true },

@@ -1,5 +1,5 @@
 import React, { ButtonHTMLAttributes } from 'react'
-import styled from 'styled-components'
+import clsx from 'clsx'
 import { ColorScheme, Size } from '../types/common'
 import {
   bgColor,
@@ -24,46 +24,44 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant
 }
 
-const StyledButton = styled.button.attrs(
-  ({ colorScheme, disabled, rounded, size, variant }: ButtonProps) => ({
-    className: `font-semibold
-      ${textSizes[size ? size : 'md']}
-      ${buttonPadding[size ? size : 'md']}
-      ${
-        variant === 'solid'
-          ? bgColor[colorScheme ? colorScheme : 'blue']
-          : 'bg-transparent'
-      }
-      ${
-        variant === 'solid'
-          ? 'text-white'
-          : textColor[colorScheme ? colorScheme : 'blue']
-      }
-      ${variant === 'outline' && 'border-2'}
-      ${variant === 'outline' &&
-        borderColor[colorScheme ? colorScheme : 'blue']}
-      ${variant !== 'link' && hoverBgColor[colorScheme ? colorScheme : 'blue']}
-      ${variant !== 'solid' &&
-        hoverTextColor[colorScheme ? colorScheme : 'blue']}
-      ${variant !== 'solid' &&
-        hoverBorderColor[colorScheme ? colorScheme : 'blue']}
-      ${(variant === 'outline' || variant === 'ghost') && 'hover:bg-opacity-10'}
-      ${variant === 'link' && 'hover:underline'}
-      transition-all
-      duration-300
-      ${rounded ? 'rounded-2xl' : 'rounded-lg'}
-      ${(variant === 'solid' || variant === 'outline') && 'shadow-md'}
-      ${disabled && 'pointer-events-none opacity-50'}
-      `,
-  })
-)<ButtonProps>`
-  &:focus {
-    outline: none;
-  }
-`
+const defaultClasses =
+  'font-semibold transition-all duration-300 focus:outline-none'
+
+const getClasses = ({
+  className,
+  colorScheme,
+  disabled,
+  fullWidth,
+  rounded,
+  size,
+  variant,
+}: Partial<ButtonProps>) =>
+  clsx([
+    defaultClasses,
+    size ? textSizes[size] : textSizes['md'],
+    size ? buttonPadding[size] : buttonPadding['md'],
+    variant === 'solid'
+      ? bgColor[colorScheme ? colorScheme : 'blue']
+      : 'bg-transparent',
+    variant === 'solid'
+      ? 'text-white'
+      : textColor[colorScheme ? colorScheme : 'blue'],
+    variant === 'outline' && 'border-2',
+    variant === 'outline' && borderColor[colorScheme ? colorScheme : 'blue'],
+    variant !== 'link' && hoverBgColor[colorScheme ? colorScheme : 'blue'],
+    variant !== 'solid' && hoverTextColor[colorScheme ? colorScheme : 'blue'],
+    variant !== 'solid' && hoverBorderColor[colorScheme ? colorScheme : 'blue'],
+    (variant === 'outline' || variant === 'ghost') && 'hover:bg-opacity-10',
+    variant === 'link' && 'hover:underline',
+    rounded ? 'rounded-2xl' : 'rounded-lg',
+    disabled && 'pointer-events-none opacity-50',
+    fullWidth && 'w-auto',
+    className,
+  ])
 
 export const Button: React.FC<ButtonProps> = ({
   children,
+  className,
   colorScheme = 'blue',
   disabled,
   fullWidth,
@@ -72,20 +70,19 @@ export const Button: React.FC<ButtonProps> = ({
   rightIcon,
   rounded,
   size = 'md',
-  type = 'button',
   variant = 'solid',
   ...props
 }) => {
+  const classes = getClasses({
+    colorScheme,
+    disabled,
+    fullWidth,
+    rounded,
+    size,
+    variant,
+  })
   return (
-    <StyledButton
-      colorScheme={colorScheme}
-      disabled={disabled}
-      rounded={rounded}
-      size={size}
-      variant={variant}
-      type={type}
-      {...props}
-    >
+    <button className={classes} {...props}>
       <div className="flex items-center">
         {leftIcon && <span className="mr-2 flex items-center">{leftIcon}</span>}
         {children}
@@ -93,6 +90,6 @@ export const Button: React.FC<ButtonProps> = ({
           <span className="ml-2 flex items-center">{rightIcon}</span>
         )}
       </div>
-    </StyledButton>
+    </button>
   )
 }
