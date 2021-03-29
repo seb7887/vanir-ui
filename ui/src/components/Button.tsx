@@ -10,6 +10,7 @@ import {
   textColor,
 } from '../utils/colors'
 import { buttonPadding, textSizes } from '../utils/sizes'
+import { Flex } from './Flex'
 
 type ButtonVariant = 'solid' | 'outline' | 'link' | 'ghost'
 
@@ -24,7 +25,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant
 }
 
-const defaultClasses =
+const baseClasses =
   'font-semibold transition-all duration-300 focus:outline-none'
 
 const getClasses = ({
@@ -37,7 +38,7 @@ const getClasses = ({
   variant,
 }: Partial<ButtonProps>) =>
   clsx([
-    defaultClasses,
+    baseClasses,
     size ? textSizes[size] : textSizes['md'],
     size ? buttonPadding[size] : buttonPadding['md'],
     variant === 'solid'
@@ -83,13 +84,19 @@ export const Button: React.FC<ButtonProps> = ({
   })
   return (
     <button className={classes} {...props}>
-      <div className="flex items-center">
-        {leftIcon && <span className="mr-2 flex items-center">{leftIcon}</span>}
+      <Flex align="center">
+        {leftIcon && (
+          <Flex className="mr-2" align="center" component="span">
+            {leftIcon}
+          </Flex>
+        )}
         {children}
         {rightIcon && (
-          <span className="ml-2 flex items-center">{rightIcon}</span>
+          <Flex className="ml-2" align="center" component="span">
+            {rightIcon}
+          </Flex>
         )}
-      </div>
+      </Flex>
     </button>
   )
 }
