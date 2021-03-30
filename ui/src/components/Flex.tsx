@@ -2,7 +2,7 @@ import React from 'react'
 import clsx from 'clsx'
 import { Box, BoxProps } from './Box'
 
-interface FlexProps extends BoxProps {
+export interface FlexProps extends BoxProps {
   align?: 'start' | 'end' | 'center' | 'strech' | 'baseline'
   direction?: 'column' | 'column-reverse' | 'row' | 'row-reverse'
   grow?: boolean

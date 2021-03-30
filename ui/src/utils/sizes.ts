@@ -1,4 +1,4 @@
-import { Size } from '../types/common'
+import { ResponsiveSize, Size } from '../types/common'
 
 export const buttonPadding: Record<Size, string> = {
   xs: 'px-2 py-1',
@@ -12,4 +12,13 @@ export const textSizes: Record<Size, string> = {
   sm: 'text-sm',
   md: 'text-base',
   lg: 'text-xl',
+}
+
+export const shadowSizes: Record<ResponsiveSize | 'default', string> = {
+  sm: 'shadow-sm',
+  default: 'shadow',
+  md: 'shadow-md',
+  lg: 'shadow-lg',
+  xl: 'shadow-xl',
+  '2xl': 'shadow-2xl',
 }
