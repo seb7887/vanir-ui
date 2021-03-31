@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { HTMLAttributes } from 'react'
 import clsx from 'clsx'
 
-export interface BoxProps {
+export interface BoxProps
+  extends Pick<HTMLAttributes<HTMLDivElement>, 'onClick'> {
   className?: string
   component?: 'div' | 'span'
 }

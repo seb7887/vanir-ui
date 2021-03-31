@@ -1,4 +1,4 @@
-import { ColorScheme } from '../types/common'
+import { ColorScheme, Theme } from '../types/common'
 
 export const textColor: Record<ColorScheme, string> = {
   blue: 'text-blue-400',
@@ -28,6 +28,13 @@ export const hoverBorderColor: Record<ColorScheme, string> = {
   red: 'hover:border-red-500',
 }
 
+export const hoverBorderColor400: Record<ColorScheme, string> = {
+  blue: 'hover:border-blue-400',
+  green: 'hover:border-green-400',
+  purple: 'hover:border-purple-400',
+  red: 'hover:border-red-400',
+}
+
 export const bgColor: Record<ColorScheme, string> = {
   blue: 'bg-blue-400',
   green: 'bg-green-400',
@@ -40,4 +47,9 @@ export const hoverBgColor: Record<ColorScheme, string> = {
   green: 'hover:bg-green-500',
   purple: 'hover:bg-purple-500',
   red: 'hover:bg-red-500',
+}
+
+export const themeColor: Record<Theme, string> = {
+  light: 'text-black',
+  dark: 'text-gray-50',
 }
