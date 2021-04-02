@@ -11,6 +11,7 @@ import {
 } from '../utils/colors'
 import { buttonPadding, textSizes } from '../utils/sizes'
 import { Flex } from './Flex'
+import { Spinner } from './Spinner'
 
 type ButtonVariant = 'solid' | 'outline' | 'link' | 'ghost'
 
@@ -27,6 +28,13 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const baseClasses =
   'font-semibold transition-all duration-300 focus:outline-none'
+
+const marginClass = {
+  xs: 'mr-1',
+  sm: 'mr-1',
+  md: 'mr-2',
+  lg: 'mr-3',
+}
 
 const getClasses = ({
   className,
@@ -85,11 +93,13 @@ export const Button: React.FC<ButtonProps> = ({
   return (
     <button className={classes} {...props}>
       <Flex align="center">
-        {leftIcon && (
+        {loading ? (
+          <Spinner size={size} className={marginClass[size]} />
+        ) : leftIcon ? (
           <Flex className="mr-2" align="center" component="span">
             {leftIcon}
           </Flex>
-        )}
+        ) : null}
         {children}
         {rightIcon && (
           <Flex className="ml-2" align="center" component="span">

@@ -15,7 +15,6 @@ export interface TabsProps {
   colorScheme?: ColorScheme
   className?: string
   defaultTab?: number
-  isLazy?: boolean
   onTabChange?: (key: number) => void | Promise<void>
 }
 
