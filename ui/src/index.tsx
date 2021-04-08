@@ -1,6 +1,8 @@
 import './tailwind.css'
 
 export * from './components/AppBar'
+export * from './components/Avatar'
+export * from './components/Badge'
 export * from './components/Box'
 export * from './components/Breadcrumb'
 export * from './components/Button'
