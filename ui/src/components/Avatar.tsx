@@ -6,6 +6,7 @@ import { Flex } from './Flex'
 import { bgColor } from '../utils/colors'
 
 export interface AvatarProps {
+  animated?: boolean
   badge?: boolean
   badgeColor?: 'green' | 'red'
   colorScheme?: ColorScheme
@@ -47,6 +48,7 @@ const badgeSize = {
 const badgeBaseClasses = 'rounded-full absolute right-0 bottom-0 ring-1'
 
 export const Avatar: React.FC<AvatarProps> = ({
+  animated,
   badge,
   badgeColor = 'green',
   colorScheme = 'blue',
@@ -66,6 +68,7 @@ export const Avatar: React.FC<AvatarProps> = ({
     badgeBaseClasses,
     badgeColor && badgeColors[badgeColor],
     size && badgeSize[size],
+    animated && 'animate-ping',
   ])
   const initials = useMemo(() => getInitials(name), [name])
 
