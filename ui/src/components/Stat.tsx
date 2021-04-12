@@ -1,7 +1,6 @@
 import React, { useMemo } from 'react'
 import clsx from 'clsx'
 import { Flex } from './Flex'
-import { Size } from '../types/common'
 
 export interface StatProps {
   className?: string
