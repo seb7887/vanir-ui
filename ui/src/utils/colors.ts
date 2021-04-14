@@ -35,6 +35,20 @@ export const hoverBorderColor400: Record<ColorScheme, string> = {
   red: 'hover:border-red-400',
 }
 
+export const focusBorderColor: Record<ColorScheme, string> = {
+  blue: 'focus-within:border-blue-500',
+  green: 'focus-within:border-green-500',
+  purple: 'focus-within:border-purple-500',
+  red: 'focus-within:border-red-500',
+}
+
+export const focusBorderBottomColor: Record<ColorScheme, string> = {
+  blue: 'focus-within:border-blue-500',
+  green: 'focus-within:border-green-500',
+  purple: 'focus-within:border-purple-500',
+  red: 'focus-within:border-red-500',
+}
+
 export const bgColor: Record<ColorScheme, string> = {
   blue: 'bg-blue-400',
   green: 'bg-green-400',
