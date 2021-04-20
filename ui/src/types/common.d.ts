@@ -5,3 +5,8 @@ export type ColorScheme = 'blue' | 'green' | 'purple' | 'red'
 export type ResponsiveSize = 'sm' | 'md' | 'lg' | 'xl' | '2xl'
 
 export type Theme = 'light' | 'dark'
+
+export interface Option {
+  label: string
+  value: string
+}

@@ -1,18 +1,13 @@
 import React, { SelectHTMLAttributes, useCallback } from 'react'
 import clsx from 'clsx'
-import { ColorScheme, Size } from '../types/common'
+import { ColorScheme, Size, Option } from '../types/common'
 import { focusBorderColor } from '../utils/colors'
-
-export interface SelectOption {
-  label: string
-  value: string
-}
 
 type SelectVariant = 'outline' | 'unstyled' | 'flushed'
 
 export interface SelectProps
   extends Omit<SelectHTMLAttributes<HTMLSelectElement>, 'size' | 'onChange'> {
-  options: SelectOption[]
+  options: Option[]
   className?: string
   colorScheme?: ColorScheme
   variant?: SelectVariant

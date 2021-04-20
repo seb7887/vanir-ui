@@ -23,9 +23,9 @@
     "tw-config": "npx tailwind-config-viewer"
   },
   "peerDependencies": {
+    "@tailwindcss/forms": ">=0.3.2",
     "react": ">=16",
-    "tailwindcss": ">=2",
-    "@tailwindcss/forms": ">=0.3.2"
+    "tailwindcss": ">=2"
   },
   "husky": {
     "hooks": {
@@ -92,7 +92,9 @@
     "typescript": "^4.2.3"
   },
   "dependencies": {
-    "clsx": "^1.1.1"
+    "@types/react-transition-group": "^4.4.1",
+    "clsx": "^1.1.1",
+    "react-transition-group": "^4.4.1"
   },
   "jest": {
     "moduleNameMapper": {

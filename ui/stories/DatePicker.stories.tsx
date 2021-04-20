@@ -1,14 +1,14 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react'
-import { Select, SelectProps } from '../src'
+import { DatePicker, DataPickerProps } from '../src'
 
 const colorScheme = ['blue', 'green', 'purple', 'red']
 const sizes = ['xs', 'sm', 'md', 'lg']
 const variant = ['outline', 'unstyled', 'flushed']
 
 const meta: Meta = {
-  title: 'Select',
-  component: Select,
+  title: 'DatePicker',
+  component: DatePicker,
   argTypes: {
     colorScheme: {
       control: {
@@ -44,28 +44,6 @@ const meta: Meta = {
 
 export default meta
 
-const Template: Story<SelectProps> = args => (
-  <div className="w-60">
-    <Select {...args} />
-  </div>
-)
-
-const options = [
-  {
-    label: 'One',
-    value: 'one',
-  },
-  {
-    label: 'Two',
-    value: 'two',
-  },
-  {
-    label: 'Three',
-    value: 'three',
-  },
-]
+const Template: Story<DataPickerProps> = args => <DatePicker {...args} />
 
 export const Default = Template.bind({})
-Default.args = {
-  options,
-}

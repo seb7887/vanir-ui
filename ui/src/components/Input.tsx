@@ -1,8 +1,8 @@
 import React, { InputHTMLAttributes } from 'react'
 import clsx from 'clsx'
 import { ColorScheme, Size } from '../types/common'
-import { Flex } from './Flex'
 import { focusBorderColor } from '../utils/colors'
+import { Flex } from './Flex'
 
 type InputVariant = 'outline' | 'unstyled' | 'flushed'
 
