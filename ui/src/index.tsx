@@ -1,5 +1,6 @@
 import './tailwind.css'
 
+export * from './components/Alert'
 export * from './components/AppBar'
 export * from './components/Autocomplete'
 export * from './components/Avatar'
@@ -26,4 +27,5 @@ export * from './components/Stat'
 export * from './components/Switch'
 export * from './components/Tabs'
 export * from './components/TextArea'
+export * from './components/Tooltip'
 export * from './components/Transition'
