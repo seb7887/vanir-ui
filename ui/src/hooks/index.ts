@@ -1,4 +1,4 @@
-import { useEffect, useState, MutableRefObject, useRef } from 'react'
+import { useEffect, useState, MutableRefObject, useRef, RefObject } from 'react'
 
 export function useHover<T>(): [MutableRefObject<T>, boolean] {
   const [value, setValue] = useState<boolean>(false)
@@ -21,4 +21,22 @@ export function useHover<T>(): [MutableRefObject<T>, boolean] {
     [ref.current] // Recall only if ref changes
   )
   return [ref, value]
+}
+
+export function useClickOutside(ref: RefObject<Element>, handler: any) {
+  useEffect(() => {
+    const listener = (e: any) => {
+      if (!ref.current || ref.current.contains(e.target)) {
+        return
+      }
+      handler(e)
+    }
+    document.addEventListener('mousedown', listener)
+    document.addEventListener('touchstart', listener)
+
+    return () => {
+      document.removeEventListener('mousedown', listener)
+      document.removeEventListener('touchstart', listener)
+    }
+  }, [ref, handler])
 }

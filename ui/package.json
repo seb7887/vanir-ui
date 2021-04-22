@@ -45,11 +45,11 @@
   "size-limit": [
     {
       "path": "dist/vanir-ui.cjs.production.min.js",
-      "limit": "10 KB"
+      "limit": "80 KB"
     },
     {
       "path": "dist/vanir-ui.esm.js",
-      "limit": "10 KB"
+      "limit": "100 KB"
     }
   ],
   "keywords": [
@@ -92,6 +92,7 @@
     "typescript": "^4.2.3"
   },
   "dependencies": {
+    "@reach/portal": "^0.15.0",
     "@types/react-transition-group": "^4.4.1",
     "clsx": "^1.1.1",
     "react-transition-group": "^4.4.1"
