@@ -1,5 +1,26 @@
 import { ColorScheme, Theme } from '../types/common'
 
+export const colors: Record<ColorScheme, string> = {
+  blue: '#60A5FA',
+  green: '#34D399',
+  purple: '#A78BFA',
+  red: '#F87171',
+}
+
+export const colors100: Record<ColorScheme, string> = {
+  blue: '#DBEAFE',
+  green: '#D1FAE5',
+  purple: '#EDE9FE',
+  red: '#FEE2E2',
+}
+
+export const colors700: Record<ColorScheme, string> = {
+  blue: '#1D4ED8',
+  green: '#047857',
+  purple: '#6D28D9',
+  red: '#B91C1C',
+}
+
 export const textColor: Record<ColorScheme, string> = {
   blue: 'text-blue-400',
   green: 'text-green-400',
@@ -54,6 +75,13 @@ export const bgColor: Record<ColorScheme, string> = {
   green: 'bg-green-400',
   purple: 'bg-purple-400',
   red: 'bg-red-400',
+}
+
+export const ringColor: Record<ColorScheme, string> = {
+  blue: 'ring-blue-300',
+  green: 'ring-green-300',
+  purple: 'ring-purple-300',
+  red: 'ring-red-300',
 }
 
 export const hoverBgColor: Record<ColorScheme, string> = {
