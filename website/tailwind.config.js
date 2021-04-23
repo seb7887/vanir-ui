@@ -9,7 +9,10 @@ module.exports = {
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+      borderWidth: ['hover'],
+      fontWeight: ['hover'],
+    },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 }

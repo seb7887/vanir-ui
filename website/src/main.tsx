@@ -1,11 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { BrowserRouter } from 'react-router-dom'
+import { VanirUIProvider } from 'vanir-ui'
 import './index.css'
 import App from './App'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <VanirUIProvider>
+        <App />
+      </VanirUIProvider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 )

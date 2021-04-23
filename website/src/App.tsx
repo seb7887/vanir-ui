@@ -1,21 +1,17 @@
-import React, { useState } from 'react'
-import { Button } from 'vanir-ui'
-import './App.css'
+import React from 'react'
+import { Switch, Route, Redirect } from 'react-router-dom'
+import { Layout } from './layouts'
+import { Home, Docs } from './pages'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App: React.FC = () => {
   return (
-    <div className="w-screen flex justify-center items-center h-screen">
-      <Button
-        variant="solid"
-        colorScheme="green"
-        size="lg"
-        onClick={() => setCount(prev => prev + 1)}
-      >
-        Hello {count} times
-      </Button>
-    </div>
+    <Layout>
+      <Switch>
+        <Route exact component={Home} path="/" />
+        <Route component={Docs} path="/docs" />
+        <Redirect to="/" />
+      </Switch>
+    </Layout>
   )
 }
 
