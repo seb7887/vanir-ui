@@ -8,7 +8,7 @@ const App: React.FC = () => {
     <Layout>
       <Switch>
         <Route exact component={Home} path="/" />
-        <Route component={Docs} path="/docs" />
+        <Route component={Docs} path="/docs/:id" />
         <Redirect to="/" />
       </Switch>
     </Layout>

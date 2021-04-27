@@ -1,0 +1,36 @@
+import { Button } from 'vanir-ui'
+
+# Getting Started
+
+## Prerequisites
+
+You must have installed Tailwind with Tailwind Forms plugin.
+
+## Installation
+
+Inside your React project directory, install Vanir UI by running either of the following:
+
+```bash
+npm i vanir-ui
+```
+
+```bash
+yarn add vanir-ui
+```
+
+## Set up Provider
+
+For Vanir UI to work correctly, you need to set up the `VanirUIProvider` at the root of your application.
+
+Go to the root of your application and do this:
+
+```tsx
+import React from 'react'
+// 1. Import `VanirUIProvider` component
+import { VanirUIProvider } from 'vanir-ui'
+
+const App: React.FC = ({ children }) => {
+  // 2. Use at the root of your app
+  return <VanirUIProvider>{children}</VanirUIProvider>
+}
+```
