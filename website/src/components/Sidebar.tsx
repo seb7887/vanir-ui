@@ -21,7 +21,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ sections }) => {
   const { pathname } = useLocation()
 
   return (
-    <Flex direction="column" className="border-r-2 px-8 pt-8">
+    <Flex
+      direction="column"
+      className="border-r-2 pl-8 pr-6 pt-8 h-screen fixed"
+    >
       {sections.map(({ title, items }) => (
         <div key={title} className="mb-4">
           <h2 className="uppercase font-semibold text-lg mb-2 text-gray-900">

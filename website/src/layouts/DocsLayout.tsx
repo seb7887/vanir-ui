@@ -1,6 +1,6 @@
 import React from 'react'
 import { MDXProvider } from '@mdx-js/react'
-import { Sidebar, MDXComponents } from '../components'
+import { Sidebar, MDXComponents, Footer } from '../components'
 
 const navigationItems = [
   {
@@ -28,10 +28,13 @@ export const MDXLayoutProvider: React.FC = ({ children }) => {
 }
 
 export const DocsLayout: React.FC = ({ children }) => (
-  <div className="w-full h-full flex">
+  <div className="w-full h-full flex flex-row">
     <Sidebar sections={navigationItems} />
     <MDXLayoutProvider>
-      <div className="flex-1 px-8 pt-10">{children}</div>
+      <div className="flex-1 px-8 pt-10 ml-52">
+        {children}
+        <Footer />
+      </div>
     </MDXLayoutProvider>
   </div>
 )

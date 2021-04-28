@@ -6,7 +6,7 @@ import logo from '../favicon.svg'
 
 export const Layout: React.FC = ({ children }) => (
   <div className="w-screen flex flex-col h-screen text-gray-900">
-    <AppBar justify="between" className="px-8">
+    <AppBar justify="between" className="px-8 fixed z-20 bg-white">
       <Link to="/" className="flex items-center">
         <img
           src={logo}
@@ -21,6 +21,6 @@ export const Layout: React.FC = ({ children }) => (
         <GoMarkGithub className="text-xl cursor-pointer" />
       </a>
     </AppBar>
-    {children}
+    <main className="pt-12">{children}</main>
   </div>
 )
