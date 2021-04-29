@@ -1,0 +1,57 @@
+import { Flex, Box, Table } from 'vanir-ui'
+import { Example } from '../../components'
+import { columns, flexProps } from '../../utils'
+
+# Flex
+
+Flex is a Box with _display: flex_ and comes with helpful style shorthand. It renders a _div_ element.
+
+## Import
+
+```tsx
+import { Flex } from 'vanir-ui'
+```
+
+## Usage
+
+<Example>
+  <Flex justify="between">
+    <Flex
+      justify="center"
+      align="center"
+      className="bg-red-400 text-white w-12 h-12"
+    >
+      Box 1
+    </Flex>
+    <Flex
+      justify="center"
+      align="center"
+      className="bg-green-400 text-white w-12 h-12"
+    >
+      Box 2
+    </Flex>
+  </Flex>
+</Example>
+
+```tsx
+<Flex justify="between">
+  <Flex
+    justify="center"
+    align="center"
+    className="bg-red-400 text-white w-12 h-12"
+  >
+    Box 1
+  </Flex>
+  <Flex
+    justify="center"
+    align="center"
+    className="bg-green-400 text-white w-12 h-12"
+  >
+    Box 2
+  </Flex>
+</Flex>
+```
+
+## Props
+
+<Table columns={columns} data={flexProps} />

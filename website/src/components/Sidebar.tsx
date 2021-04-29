@@ -33,6 +33,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ sections }) => {
           <Flex direction="column">
             {items.map(item => (
               <Link
+                key={item.link}
                 to={item.link}
                 className={clsx([
                   'px-2 py-1',

@@ -1,0 +1,41 @@
+import { Grid, GridItem, Table } from 'vanir-ui'
+import { Example } from '../../components'
+import { columns, gridProps, gridItemProps } from '../../utils'
+
+# Grid
+
+A primitive useful for grid layouts. Grid is _Box_ with _display: grid_ and it comes with helpful style shorthand. It renders a _div_ element
+
+## Import
+
+```tsx
+import { Grid } from 'vanir-ui'
+```
+
+## Usage
+
+<Example>
+  <Grid rows="2" cols="5" gap="4" className="h-40">
+    <GridItem className="bg-red-400" colSpan="1" rowSpan="2" />
+    <GridItem className="bg-gray-200" colSpan="2" />
+    <GridItem className="bg-gray-200" colSpan="2" />
+    <GridItem className="bg-red-400" colSpan="4" />
+  </Grid>
+</Example>
+
+```tsx
+<Grid rows="2" cols="5" gap="4" className="h-40">
+  <GridItem className="bg-red-400" colSpan="1" rowSpan="2" />
+  <GridItem className="bg-gray-200" colSpan="2" />
+  <GridItem className="bg-gray-200" colSpan="2" />
+  <GridItem className="bg-red-400" colSpan="4" />
+</Grid>
+```
+
+## Props
+
+<Table columns={columns} data={gridProps} />
+
+## GridItem Props
+
+<Table columns={columns} data={gridItemProps} />

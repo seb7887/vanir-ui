@@ -10,6 +10,10 @@ const navigationItems = [
         title: 'Installation',
         link: '/docs/getting-started',
       },
+      {
+        title: 'Changelog',
+        link: '/docs/changelog',
+      },
     ],
   },
   {
@@ -18,6 +22,18 @@ const navigationItems = [
       {
         title: 'Box',
         link: '/docs/layout/box',
+      },
+      {
+        title: 'Container',
+        link: '/docs/layout/container',
+      },
+      {
+        title: 'Flex',
+        link: '/docs/layout/flex',
+      },
+      {
+        title: 'Grid',
+        link: '/docs/layout/grid',
       },
     ],
   },
