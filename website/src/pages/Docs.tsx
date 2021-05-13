@@ -1,7 +1,15 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { DocsLayout } from '../layouts'
-import { GettingStarted, Changelog, Box, Container, Flex, Grid } from './docs'
+import {
+  GettingStarted,
+  Changelog,
+  Box,
+  Container,
+  Flex,
+  Grid,
+  Button,
+} from './docs'
 
 export const Docs: React.FC = () => {
   return (
@@ -13,6 +21,7 @@ export const Docs: React.FC = () => {
         <Route path="/docs/layout/container" component={Container} />
         <Route path="/docs/layout/flex" component={Flex} />
         <Route path="/docs/layout/grid" component={Grid} />
+        <Route path="/docs/forms/button" component={Button} />
       </Switch>
     </DocsLayout>
   )

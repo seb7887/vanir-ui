@@ -23,7 +23,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ sections }) => {
   return (
     <Flex
       direction="column"
-      className="border-r-2 pl-8 pr-6 pt-8 h-screen fixed"
+      className="border-r-2 pl-8 pr-6 pt-8 h-screen fixed overflow-y-scroll"
     >
       {sections.map(({ title, items }) => (
         <div key={title} className="mb-4">

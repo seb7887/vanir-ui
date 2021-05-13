@@ -1,0 +1,180 @@
+import { Button, Flex, Box } from 'vanir-ui'
+import { HiLightningBolt } from 'react-icons/hi'
+import { Example } from '../../components'
+
+# Button
+
+The Button component is used to trigger an action or event, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation.
+
+## Import
+
+```tsx
+import { Button } from 'vanir-ui'
+```
+
+## Usage
+
+<Example>
+  <Button>Button</Button>
+</Example>
+
+```tsx
+<Button>Button</Button>
+```
+
+### Sizes
+
+Use the _size_ prop to change the size of the button. You can set the value to _xs_, _sm_, _md_ or _lg_.
+
+<br />
+<Example>
+  <Flex align="center">
+    <Box className="mr-2">
+      <Button size="xs">Button</Button>
+    </Box>
+    <Box className="mr-2">
+      <Button size="sm">Button</Button>
+    </Box>
+    <Box className="mr-2">
+      <Button>Button</Button>
+    </Box>
+    <Box className="mr-2">
+      <Button size="lg">Button</Button>
+    </Box>
+  </Flex>
+</Example>
+
+```tsx
+<Flex align="center">
+  <Box className="mr-2">
+    <Button size="xs">Button</Button>
+  </Box>
+  <Box className="mr-2">
+    <Button size="sm">Button</Button>
+  </Box>
+  <Box className="mr-2">
+    <Button>Button</Button>
+  </Box>
+  <Box className="mr-2">
+    <Button size="lg">Button</Button>
+  </Box>
+</Flex>
+```
+
+### Variants
+
+Use the _variant_ prop to change the visual style of the button. You can set the value to _solid_, _outline_, _ghost_ or _link_.
+
+<br />
+<Example>
+  <Flex align="center">
+    <Box className="mr-2">
+      <Button variant="solid">Button</Button>
+    </Box>
+    <Box className="mr-2">
+      <Button variant="outline">Button</Button>
+    </Box>
+    <Box className="mr-2">
+      <Button variant="ghost">Button</Button>
+    </Box>
+    <Box className="mr-2">
+      <Button variant="link">Button</Button>
+    </Box>
+  </Flex>
+</Example>
+
+```tsx
+<Flex align="center">
+  <Box className="mr-2">
+    <Button variant="solid">Button</Button>
+  </Box>
+  <Box className="mr-2">
+    <Button variant="outline">Button</Button>
+  </Box>
+  <Box className="mr-2">
+    <Button variant="ghost">Button</Button>
+  </Box>
+  <Box className="mr-2">
+    <Button variant="link">Button</Button>
+  </Box>
+</Flex>
+```
+
+### Color
+
+User the _colorScheme_ prop to change the color of the button. You can set the value to _blue_, _green_, _purple_ and _red_.
+
+<br />
+<Example>
+  <Flex align="center">
+    <Box className="mr-2">
+      <Button colorScheme="blue">Button</Button>
+    </Box>
+    <Box className="mr-2">
+      <Button colorScheme="green">Button</Button>
+    </Box>
+    <Box className="mr-2">
+      <Button colorScheme="purple">Button</Button>
+    </Box>
+    <Box className="mr-2">
+      <Button colorScheme="red">Button</Button>
+    </Box>
+  </Flex>
+</Example>
+
+```tsx
+<Flex align="center">
+  <Box className="mr-2">
+    <Button colorScheme="blue">Button</Button>
+  </Box>
+  <Box className="mr-2">
+    <Button colorScheme="green">Button</Button>
+  </Box>
+  <Box className="mr-2">
+    <Button colorScheme="purple">Button</Button>
+  </Box>
+  <Box className="mr-2">
+    <Button colorScheme="red">Button</Button>
+  </Box>
+</Flex>
+```
+
+### Rounded
+
+Use the _rounded_ prop to set the button borders rounded.
+
+<br />
+<Example>
+  <Button rounded>Button</Button>
+</Example>
+
+```tsx
+<Button rounded>Button</Button>
+```
+
+### Button with icon
+
+You can add left and right icons to the button component using the _leftIcon_ and _rightIcon_ props respectively.
+
+<br />
+<Example>
+  <Flex align="center">
+    <Box className="mr-2">
+      <Button leftIcon={<HiLightningBolt />}>Button</Button>
+    </Box>
+    <Button rightIcon={<HiLightningBolt />}>Button</Button>
+  </Flex>
+</Example>
+
+### Loading state
+
+Use the _loading_ prop for loading states.
+
+<br />
+<Example>
+  <Button loading>Button</Button>
+</Example>
+
+```tsx
+<Button loading>Button</Button>
+```
