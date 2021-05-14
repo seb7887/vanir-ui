@@ -76,6 +76,126 @@ const navigationItems = [
   },
   {
     title: 'Data Display',
+    items: [
+      {
+        title: 'Badge',
+        link: '/docs/data-display/badge',
+      },
+      {
+        title: 'Stat',
+        link: '/docs/data-display/stat',
+      },
+      {
+        title: 'Table',
+        link: '/docs/data-display/table',
+      },
+    ],
+  },
+  {
+    title: 'Feedback',
+    items: [
+      {
+        title: 'Alert',
+        link: '/docs/feedback/alert',
+      },
+      {
+        title: 'Progress',
+        link: '/docs/feedback/progress',
+      },
+      {
+        title: 'Skeleton',
+        link: '/docs/feedback/skeleton',
+      },
+      {
+        title: 'Spinner',
+        link: '/docs/feedback/spinner',
+      },
+      {
+        title: 'Toast',
+        link: '/docs/feedback/toast',
+      },
+    ],
+  },
+  {
+    title: 'Overlay',
+    items: [
+      {
+        title: 'Modal',
+        link: '/docs/overlay/modal',
+      },
+      {
+        title: 'Tooltip',
+        link: '/docs/overlay/tooltip',
+      },
+    ],
+  },
+  {
+    title: 'Disclosure',
+    items: [
+      {
+        title: 'Accordion',
+        link: '/docs/disclosure/accordion',
+      },
+      {
+        title: 'Tabs',
+        link: '/docs/disclosure/tabs',
+      },
+    ],
+  },
+  {
+    title: 'Navigation',
+    items: [
+      {
+        title: 'Breadcrumb',
+        link: '/docs/navigation/breadcrumb',
+      },
+    ],
+  },
+  {
+    title: 'Media',
+    items: [
+      {
+        title: 'Avatar',
+        link: '/docs/media/avatar',
+      },
+    ],
+  },
+  {
+    title: 'Surfaces',
+    items: [
+      {
+        title: 'AppBar',
+        link: '/docs/surfaces/appbar',
+      },
+      {
+        title: 'Paper',
+        link: '/docs/surfaces/paper',
+      },
+      {
+        title: 'Card',
+        link: '/docs/surfaces/card',
+      },
+    ],
+  },
+  {
+    title: 'Other',
+    items: [
+      {
+        title: 'Stepper',
+        link: '/docs/other/stepper',
+      },
+      {
+        title: 'Empty',
+        link: '/docs/other/empty',
+      },
+    ],
+  },
+  {
+    title: '',
+    items: [],
+  },
+  {
+    title: '',
     items: [],
   },
 ]

@@ -41,4 +41,45 @@ export const options = [
   },
 ]
 
+interface Person {
+  id: string
+  name: string
+  email: string
+  age: number
+}
+
+export const tableExampleCols: TableColumn<Person>[] = [
+  {
+    Header: 'ID',
+    accessor: 'id',
+  },
+  {
+    Header: 'Name',
+    accessor: 'name',
+  },
+  {
+    Header: 'Email',
+    accessor: 'email',
+  },
+  {
+    Header: 'Age',
+    accessor: 'age',
+  },
+]
+
+export const tableExampleData: Person[] = [
+  {
+    id: '1',
+    name: 'Person 1',
+    email: 'test@test.com',
+    age: 33,
+  },
+  {
+    id: '2',
+    name: 'Person 2',
+    email: 'x@test.com',
+    age: 22,
+  },
+]
+
 export * from './props'

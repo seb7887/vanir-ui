@@ -3,7 +3,6 @@ import { Meta, Story } from '@storybook/react'
 import { Stat, StatProps } from '../src'
 
 const sizes = ['sm', 'md', 'lg']
-const variant = ['subtle', 'outline', 'solid']
 
 const meta: Meta = {
   title: 'Stat',

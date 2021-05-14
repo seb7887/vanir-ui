@@ -1,0 +1,121 @@
+import { Badge, Flex } from 'vanir-ui'
+import { Example } from '../../components'
+
+# Badge
+
+Badges are used to highlight an item's status for quick recognition.
+
+## Import
+
+```tsx
+import { Badge } from 'vanir-ui'
+```
+
+## Usage
+
+<Example>
+  <Flex>
+    <Badge>Badge</Badge>
+  </Flex>
+</Example>
+
+```tsx
+<Badge>Badge</Badge>
+```
+
+### Size
+
+Use the _size_ prop to change the component size.
+
+<br />
+<Example>
+  <Flex align="center">
+    <Badge size="sm" className="mr-2">
+      Badge
+    </Badge>
+    <Badge size="md" className="mr-2">
+      Badge
+    </Badge>
+    <Badge size="lg">Badge</Badge>
+  </Flex>
+</Example>
+
+```tsx
+<Flex align="center">
+  <Badge size="sm">Badge</Badge>
+  <Badge size="md">Badge</Badge>
+  <Badge size="lg">Badge</Badge>
+</Flex>
+```
+
+### Color
+
+Pass the _colorScheme_ prop to customize the color of the Badge.
+
+<br />
+<Example>
+  <Flex align="center">
+    <Badge colorScheme="blue" className="mr-2">
+      Badge
+    </Badge>
+    <Badge colorScheme="green" className="mr-2">
+      Badge
+    </Badge>
+    <Badge colorScheme="purple" className="mr-2">
+      Badge
+    </Badge>
+    <Badge colorScheme="red" className="mr-2">
+      Badge
+    </Badge>
+  </Flex>
+</Example>
+
+```tsx
+<Flex align="center">
+  <Badge colorScheme="blue" className="mr-2">
+    Badge
+  </Badge>
+  <Badge colorScheme="green" className="mr-2">
+    Badge
+  </Badge>
+  <Badge colorScheme="purple" className="mr-2">
+    Badge
+  </Badge>
+  <Badge colorScheme="red" className="mr-2">
+    Badge
+  </Badge>
+</Flex>
+```
+
+### Variants
+
+Pass the _variant_ prop and set it to either _subtle_, _solid_, or _outline_ to get a different style.
+
+<br />
+<Example>
+  <Flex align="center">
+    <Badge variant="outline" className="mr-2">
+      Outline
+    </Badge>
+    <Badge variant="solid" className="mr-2">
+      Solid
+    </Badge>
+    <Badge variant="subtle" className="mr-2">
+      Subtle
+    </Badge>
+  </Flex>
+</Example>
+
+```tsx
+<Flex align="center">
+  <Badge variant="outline" className="mr-2">
+    Outline
+  </Badge>
+  <Badge variant="solid" className="mr-2">
+    Solid
+  </Badge>
+  <Badge variant="subtle" className="mr-2">
+    Subtle
+  </Badge>
+</Flex>
+```
