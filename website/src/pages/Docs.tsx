@@ -19,6 +19,11 @@ import {
   Badge,
   Stat,
   Table,
+  Alert,
+  Progress,
+  Skeleton,
+  Spinner,
+  Toast,
 } from './docs'
 
 export const Docs: React.FC = () => {
@@ -46,6 +51,12 @@ export const Docs: React.FC = () => {
         <Route path="/docs/data-display/badge" component={Badge} />
         <Route path="/docs/data-display/stat" component={Stat} />
         <Route path="/docs/data-display/table" component={Table} />
+        {/* Feedback */}
+        <Route path="/docs/feedback/alert" component={Alert} />
+        <Route path="/docs/feedback/progress" component={Progress} />
+        <Route path="/docs/feedback/skeleton" component={Skeleton} />
+        <Route path="/docs/feedback/spinner" component={Spinner} />
+        <Route path="/docs/feedback/toast" component={Toast} />
       </Switch>
     </DocsLayout>
   )

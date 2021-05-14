@@ -1,0 +1,42 @@
+import { Skeleton, Avatar } from 'vanir-ui'
+import { Example } from '../../components'
+
+# Skeleton
+
+Skeleton is used to display the loading state of some components.
+
+## Import
+
+```tsx
+import { Skeleton } from 'vanir-ui'
+```
+
+## Usage
+
+<Example>
+  <div className="w-64">
+    <Skeleton className="w-16 h-16 rounded-full">
+      <Avatar size="lg" name="John Doe" src="https://bit.ly/dan-abramov" />
+    </Skeleton>
+    <Skeleton className="my-2">
+      <span>Hello World!</span>
+    </Skeleton>
+    <Skeleton>
+      <span>Another line</span>
+    </Skeleton>
+  </div>
+</Example>
+
+```tsx
+<div className="w-64">
+  <Skeleton className="w-16 h-16 rounded-full">
+    <Avatar size="lg" name="John Doe" src="https://bit.ly/dan-abramov" />
+  </Skeleton>
+  <Skeleton className="my-2">
+    <span>Hello World!</span>
+  </Skeleton>
+  <Skeleton>
+    <span>Another line</span>
+  </Skeleton>
+</div>
+```

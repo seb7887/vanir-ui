@@ -1,0 +1,37 @@
+import { Progress, Flex } from 'vanir-ui'
+import { Example } from '../../components'
+
+# Progress
+
+Progress is used to display the progress status for a task that takes a long time or consists of several steps.
+
+## Import
+
+```tsx
+import { Progress } from 'vanir-ui'
+```
+
+## Usage
+
+Here a basic example of its usage.
+
+<br />
+<Example>
+  <Flex direction="column">
+    <Progress value={75} />
+    <br />
+    <Progress value={50} size="sm" colorScheme="green" />
+    <br />
+    <Progress value={25} size="lg" colorScheme="purple" />
+  </Flex>
+</Example>
+
+```tsx
+<Flex direction="column">
+  <Progress value={75} />
+  <br />
+  <Progress value={50} size="sm" colorScheme="green" />
+  <br />
+  <Progress value={25} size="lg" colorScheme="purple" />
+</Flex>
+```

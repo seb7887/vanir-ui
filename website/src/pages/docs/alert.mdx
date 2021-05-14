@@ -1,0 +1,78 @@
+import { Alert, Flex } from 'vanir-ui'
+import { Example } from '../../components'
+
+# Alerts
+
+Alerts are used to communicate a state that affects a system, feature or page.
+
+## Import
+
+```tsx
+import { Alert } from 'vanir-ui'
+```
+
+## Usage
+
+### Status and color
+
+Change the status of the alerts by passing the status prop. This affects the color scheme and icon used. Alert supports error, success, warning, and info statuses.
+
+<br />
+<Example>
+  <Flex direction="column">
+    <Alert status="info" className="mb-2">
+      This is an important message!
+    </Alert>
+    <Alert status="warning" colorScheme="purple" className="mb-2">
+      This is an important message!
+    </Alert>
+    <Alert status="success" colorScheme="green" className="mb-2">
+      This is an important message!
+    </Alert>
+    <Alert status="error" colorScheme="red">
+      This is an important message!
+    </Alert>
+  </Flex>
+</Example>
+
+```tsx
+<Flex direction="column">
+  <Alert status="info">This is an important message!</Alert>
+  <Alert status="warning" colorScheme="purple">
+    This is an important message!
+  </Alert>
+  <Alert status="success" colorScheme="green">
+    This is an important message!
+  </Alert>
+  <Alert status="error" colorScheme="red">
+    This is an important message!
+  </Alert>
+</Flex>
+```
+
+### Variants
+
+There are two available variants: _subtle_ and _solid_. The default value is _solid_.
+
+<br />
+<Example>
+  <Flex direction="column">
+    <Alert variant="solid" className="mb-2">
+      This is an important message!
+    </Alert>
+    <Alert variant="subtle" className="mb-2">
+      This is an important message!
+    </Alert>
+  </Flex>
+</Example>
+
+```tsx
+<Flex direction="column">
+  <Alert variant="solid" className="mb-2">
+    This is an important message!
+  </Alert>
+  <Alert variant="subtle" className="mb-2">
+    This is an important message!
+  </Alert>
+</Flex>
+```
