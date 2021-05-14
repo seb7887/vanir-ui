@@ -1,0 +1,33 @@
+import { Example, ModalComponent } from '../../components'
+
+# Modal
+
+A dialog is a window overlaid on either the primary window or another dialog window. Content behind a modal dialog is inert, meaning that users cannot interact with it.
+
+## Import
+
+```tsx
+import { Modal } from 'vanir-ui'
+```
+
+## Usage
+
+<Example>
+  <ModalComponent />
+</Example>
+
+```tsx
+const { displayModal, openModal, closeModal } = useModal()
+
+return (
+  <div className="flex column h-screen w-screen justify-center items-center">
+    <div>
+      <Button onClick={() => openModal()}>Open Modal</Button>
+    </div>
+    <Modal open={displayModal} onClose={() => closeModal()}>
+      <h1>Hello World</h1>
+      <p>This is a message</p>
+    </Modal>
+  </div>
+)
+```

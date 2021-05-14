@@ -24,6 +24,8 @@ import {
   Skeleton,
   Spinner,
   Toast,
+  Modal,
+  Tooltip,
 } from './docs'
 
 export const Docs: React.FC = () => {
@@ -57,6 +59,9 @@ export const Docs: React.FC = () => {
         <Route path="/docs/feedback/skeleton" component={Skeleton} />
         <Route path="/docs/feedback/spinner" component={Spinner} />
         <Route path="/docs/feedback/toast" component={Toast} />
+        {/* Overlay */}
+        <Route path="/docs/overlay/modal" component={Modal} />
+        <Route path="/docs/overlay/tooltip" component={Tooltip} />
       </Switch>
     </DocsLayout>
   )
