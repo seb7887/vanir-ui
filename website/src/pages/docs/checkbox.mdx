@@ -1,0 +1,73 @@
+import { Checkbox, Flex, Box } from 'vanir-ui'
+import { HiLightningBolt } from 'react-icons/hi'
+import { Example } from '../../components'
+
+# Checkbox
+
+The _Checkbox_ component is used in forms when a user needs to select multiple values from several options.
+
+## Import
+
+```tsx
+import { Checkbox } from 'vanir-ui'
+```
+
+## Usage
+
+Basic usage of _Checkbox_.
+
+<Example>
+  <Checkbox label="Checkbox" value={true} />
+</Example>
+
+```tsx
+<Checkbox label="Checkbox" value={true} />
+```
+
+### Disabled Checkbox
+
+<Example>
+  <Checkbox label="Checkbox" value={true} disabled />
+</Example>
+
+### Sizes
+
+Use the _size_ prop to change the component size.
+
+<br />
+<Example>
+  <Flex align="center">
+    <Checkbox label="Checkbox" value={true} size="sm" />
+    <Checkbox label="Checkbox" value={true} size="md" />
+  </Flex>
+</Example>
+
+```tsx
+<Flex align="center">
+  <Checkbox label="Checkbox" value={true} size="sm" />
+  <Checkbox label="Checkbox" value={true} size="md" />
+</Flex>
+```
+
+### Color
+
+Use the _colorScheme_ prop to change the color.
+
+<br />
+<Example>
+  <Flex align="center">
+    <Checkbox label="Checkbox" value={true} colorScheme="blue" />
+    <Checkbox label="Checkbox" value={true} colorScheme="green" />
+    <Checkbox label="Checkbox" value={true} colorScheme="purple" />
+    <Checkbox label="Checkbox" value={true} colorScheme="red" />
+  </Flex>
+</Example>
+
+```tsx
+<Flex align="center">
+  <Checkbox label="Checkbox" value={true} colorScheme="blue" />
+  <Checkbox label="Checkbox" value={true} colorScheme="green" />
+  <Checkbox label="Checkbox" value={true} colorScheme="purple" />
+  <Checkbox label="Checkbox" value={true} colorScheme="red" />
+</Flex>
+```

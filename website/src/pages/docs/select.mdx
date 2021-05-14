@@ -1,0 +1,25 @@
+import { Select, Flex } from 'vanir-ui'
+import { Example } from '../../components'
+import { options } from '../../utils'
+
+# Select
+
+_Select_ component is a component that allows users pick a value from predefined options. Ideally, it should be used when there are more than 5 options, otherwise you might consider using a radio group instead.
+
+## Import
+
+```tsx
+import { Select } from 'vanir-ui'
+```
+
+## Usage
+
+<Example>
+  <Flex direction="column">
+    <Select options={options} />
+  </Flex>
+</Example>
+
+```tsx
+<Select options={options} />
+```

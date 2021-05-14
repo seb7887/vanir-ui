@@ -26,4 +26,19 @@ export const columns: TableColumn<Props>[] = [
   },
 ]
 
+export const options = [
+  {
+    label: 'One',
+    value: 'one',
+  },
+  {
+    label: 'Two',
+    value: 'two',
+  },
+  {
+    label: 'Three',
+    value: 'three',
+  },
+]
+
 export * from './props'

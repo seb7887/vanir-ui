@@ -1,0 +1,50 @@
+import { Radio, Flex } from 'vanir-ui'
+import { Example } from '../../components'
+
+# Radio
+
+Radios are used when only one choice may be selected in a series of options.
+
+## Import
+
+```tsx
+import { Radio } from 'vanir-ui'
+```
+
+## Usage
+
+<Example>
+  <Flex direction="column">
+    <Radio>Radio</Radio>
+    <Radio colorScheme="green" value={true}>
+      Radio
+    </Radio>
+    <Radio colorScheme="purple" value={true}>
+      Radio
+    </Radio>
+    <Radio colorScheme="red" value={true}>
+      Radio
+    </Radio>
+    <Radio disabled value={true}>
+      Radio
+    </Radio>
+  </Flex>
+</Example>
+
+```tsx
+<Flex direction="column">
+  <Radio>Radio</Radio>
+  <Radio colorScheme="green" value={true}>
+    Radio
+  </Radio>
+  <Radio colorScheme="purple" value={true}>
+    Radio
+  </Radio>
+  <Radio colorScheme="red" value={true}>
+    Radio
+  </Radio>
+  <Radio disabled value={true}>
+    Radio
+  </Radio>
+</Flex>
+```

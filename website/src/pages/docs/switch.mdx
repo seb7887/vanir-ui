@@ -1,0 +1,66 @@
+import { Switch, Flex } from 'vanir-ui'
+import { Example } from '../../components'
+
+# Switch
+
+The _Switch_ component is used as an alternative for the _Checkbox_ component. You can switch between enabled or disabled states.
+
+## Import
+
+```tsx
+import { Switch } from 'vanir-ui'
+```
+
+## Usage
+
+<Example>
+  <Switch />
+</Example>
+
+```tsx
+<Switch />
+```
+
+### Size
+
+Pass the _size_ prop to change the size of the _Switch_.
+
+<br />
+<Example>
+  <Flex align="center">
+    <Switch size="sm" />
+    <Switch size="md" />
+    <Switch size="lg" />
+  </Flex>
+</Example>
+
+```tsx
+<Flex align="center">
+  <Switch size="sm" />
+  <Switch size="md" />
+  <Switch size="lg" />
+</Flex>
+```
+
+### Background Color
+
+You can change the checked background color of the _Switch_ by passing the _colorScheme_ prop.
+
+<br />
+<Example>
+  <Flex align="center">
+    <Switch colorScheme="blue" defaultValue={true} />
+    <Switch colorScheme="green" defaultValue={true} />
+    <Switch colorScheme="purple" defaultValue={true} />
+    <Switch colorScheme="red" defaultValue={true} />
+  </Flex>
+</Example>
+
+```tsx
+<Flex align="center">
+  <Switch colorScheme="blue" defaultValue={true} />
+  <Switch colorScheme="green" defaultValue={true} />
+  <Switch colorScheme="purple" defaultValue={true} />
+  <Switch colorScheme="red" defaultValue={true} />
+</Flex>
+```

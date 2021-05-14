@@ -1,0 +1,84 @@
+import { Input, Flex } from 'vanir-ui'
+import { HiPhone } from 'react-icons/hi'
+import { Example } from '../../components'
+
+# Input
+
+The Input component is a component that is used to get user input in a text field.
+
+## Import
+
+```tsx
+import { Input } from 'vanir-ui'
+```
+
+## Usage
+
+Here's a basic usage example of the _Input_ component:
+
+<Example>
+  <Input />
+</Example>
+
+```tsx
+<Input />
+```
+
+### Size
+
+The _Input_ component comes if four sizes: _xs_, _sm_, _md_ and _lg_. The default is _md_.
+
+<br />
+<Example>
+  <Flex direction="column">
+    <Input size="xs" className="mb-2" />
+    <Input size="sm" className="mb-2" />
+    <Input size="md" className="mb-2" />
+    <Input size="lg" />
+  </Flex>
+</Example>
+
+```tsx
+<Flex direction="column">
+  <Input size="xs" className="mb-2" />
+  <Input size="sm" className="mb-2" />
+  <Input size="md" className="mb-2" />
+  <Input size="lg" />
+</Flex>
+```
+
+### Variants
+
+Use the _variant_ prop to change the variant of the component. The _Input_ component comes in three different variants: _outline_, _flushed_ and _unstyled_. The default is _outline_.
+
+<br />
+<Example>
+  <Flex direction="column">
+    <Input variant="outline" className="mb-2" />
+    <Input variant="flushed" className="mb-2" />
+    <Input variant="unstyled" />
+  </Flex>
+</Example>
+
+```tsx
+<Flex direction="column">
+  <Input variant="outline" className="mb-2" />
+  <Input variant="flushed" className="mb-2" />
+  <Input variant="unstyled" />
+</Flex>
+```
+
+### Add elements inside input
+
+In some scenarios, you might need to add an icon or button inside the input component. You can do it with the _leftElement_ and _rightElement_ props.
+
+<br />
+<Example>
+  <Flex direction="column">
+    <Input leftElement={<HiPhone />} />
+  </Flex>
+</Example>
+
+```tsx
+<Input leftElement={<HiPhone />} />
+```
